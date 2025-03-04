@@ -8,6 +8,13 @@ import org.springframework.ui.Model;
 
 @Controller
 public class HelloWorldController {
+    @GetMapping("/web")
+    @ResponseBody
+    public String hello() {
+        return "Hello from BridgeLabz!(UC1)";
+    }
+
+    @GetMapping("/web/message")
     @GetMapping("/")
     @ResponseBody
     public String hello() {
